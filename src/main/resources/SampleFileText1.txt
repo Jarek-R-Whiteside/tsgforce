@@ -1,0 +1,46 @@
+08/04/2014 08:00                                                                                                   08/04/2014 Page 1
+Database Production                                                                                                   Eff 08/04/2014
+
+                          Current
+Employer                  Balance Description          Homebanking Status Mobile Banking Status Has EStatements Text                  Hold Amount Open Date  Close Date
+==================== ============ ==================== ================== ===================== =============== ==================== ============ ========== ==========
+I-YEL                       $8.81 Regular Savings      Active             Active                Y               34TT02.14                   $0.00 01/07/2014
+                          $195.73 MY PATH                                                                                               $2,000.00 01/07/2014
+I-YEL                      $33.01 Regular Savings      Active                                   Y               34TT02.13                   $0.00 01/07/2014
+                          $217.07 MY PATH                                                                                               $2,000.00 01/07/2014
+I-YEL                      $89.63 Regular Savings      Active                                   N               34TT02.02                   $0.00 01/07/2014
+                          $180.41 MY PATH                                                                                               $2,000.00 01/07/2014
+I-YEL                      $11.02 Regular Savings      Active                                   Y               34TT02.21                   $0.00 01/07/2014
+                          $849.25 MY PATH                                                                                               $2,000.00 01/07/2014
+I-YEL                     $152.02 Regular Savings      Active                                   N               34TT02.06                   $0.00 01/07/2014
+                          $168.01 MY PATH                                                                       34TT02.06               $2,000.00 01/07/2014
+I-YEL                     $386.07 Regular Savings      Active             Active                N               34TT02.01                   $0.00 01/07/2014
+                          $174.02 MY PATH                                                                       34TT02.01               $2,000.00 01/07/2014
+I-Yel                      $22.01 Regular Savings      Active                                   N               34TT02.15                   $0.00 01/07/2014
+                          $170.02 MY PATH                                                                                               $2,000.00 01/07/2014
+I-Yel                      $28.35 Regular Savings                                               N               34TT02.17                   $0.00 01/08/2014
+                          $851.63 MY PATH                                                                       34TT02.17               $2,000.00 01/08/2014
+I-YEL                     $935.87 Regular Savings      Active                                   Y               34TT02.16                   $0.00 01/21/2014
+                          $199.53 MY PATH                                                                                               $2,000.00 01/21/2014
+I-YEL                   $1,949.01 Regular Savings      Active                                   Y               34TT02.09                   $0.00 01/21/2014
+                          $216.54 MY PATH                                                                                               $2,000.00 01/21/2014
+I-YEL                     $110.59 Regular Savings      Closed                                   N               34TT02.07                   $0.00 01/23/2014
+                          $169.52 MY PATH                                                                       34TT02.07               $2,000.00 01/23/2014
+I-YEL                   $1,039.25 Regular Savings      Active             Active                N               34TT02.12                   $0.00 01/23/2014
+                          $311.18 MY PATH                                                                                               $2,000.00 01/23/2014
+I-YEL                     $238.23 Regular Savings      Active                                   Y               34TT02.04                   $0.00 01/23/2014
+                          $171.92 MY PATH                                                                                               $2,000.00 01/23/2014
+IYEL                       $15.32 Regular Savings                                               N               34TT02.05                   $0.00 01/23/2014
+                          $286.38 MY PATH                                                                                               $2,000.00 01/23/2014
+I-YEL                      $21.50 Regular Savings                                               N               34TT02.11                   $0.00 01/24/2014
+                           $38.50 MY PATH                                                                                               $2,000.00 01/24/2014
+I-YEL                      $19.44 Regular Savings      Active                                   Y               34TT02.10                   $0.00 01/24/2014
+                          $700.74 MY PATH                                                                                               $2,000.00 01/24/2014
+I-Yel                   $1,617.03 Regular Savings      Active                                   Y               34TT02.22                   $0.00 01/24/2014
+                          $268.56 MY PATH                                                                                               $2,000.00 01/24/2014
+I-YEL                       $5.00 Regular Savings      Active                                   Y               34TT02.20                   $0.00 01/24/2014
+                            $0.00 MY PATH                                                                                                   $0.00 01/24/2014 02/26/2014
+I-YEL                     $752.32 Regular Savings      Active                                   N               34TT02.08                   $0.00 02/12/2014
+                          $168.01 MY PATH                                                                                               $2,000.00 02/12/2014
+I-YEL                   $1,152.31 Regular Savings                                               N               34TT02.18                   $0.00 02/12/2014
+                          $168.01 MY PATH                                                                                               $2,000.00 02/12/2014
