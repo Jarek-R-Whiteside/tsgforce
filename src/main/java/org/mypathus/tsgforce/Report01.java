@@ -3,7 +3,7 @@ package org.mypathus.tsgforce;
 public class Report01 {
 	
 	String employer;
-	
+	double balance;
 	
 	
 	public String getEmployer() {
@@ -18,6 +18,6 @@ public class Report01 {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	double balance;
+
 
 }
