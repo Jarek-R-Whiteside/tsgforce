@@ -15,8 +15,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.file.attribute.BasicFileAttributes;
+//import java.util.ArrayList;
+//import java.util.List;
 import java.util.Iterator;
 import org.apache.tika.Tika;
 
@@ -38,16 +39,17 @@ public class FileHandler {
 //		
 //		String realFileName4 = fh.getFileType("SampleFileText1.txt");
 //		System.out.println(realFileName4);
-//		String fileHeader = "";
-//		try {
-//			fileHeader = fh.getExcelHeaders2007("SampleFileExcel.xlsx");
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		fh.identifyFileBasedOnHeaders(fileHeader);
+		
+	String fileHeader = "";
+		try {
+			fileHeader = fh.getExcelHeaders2007("SampleFileExcel.xlsx");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		fh.identifyFileBasedOnHeaders(fileHeader);
+		System.out.println(fh.getFileDate("SampleFileExcel.xls"));
 	}
-	
 	public String getFileType(String fileName) {
 		Tika tika = new Tika();
 		Path path = Paths.get(fileDirectory + fileName);
@@ -204,5 +206,16 @@ public class FileHandler {
 			System.out.println("invalid file type");
 
 		}
+	}
+	public String getFileDate(String fileName) {
+		Path path = Paths.get(fileDirectory + fileName);
+		try {
+			BasicFileAttributes fileAttr = Files.readAttributes(path, BasicFileAttributes.class);
+			return fileAttr.creationTime().toString();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "Invalid File";
 	}
 }
