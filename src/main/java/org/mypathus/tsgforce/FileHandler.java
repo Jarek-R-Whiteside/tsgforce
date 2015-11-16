@@ -28,27 +28,16 @@ public class FileHandler {
 	public static void main(String[] args) {
 		FileHandler fh = new FileHandler();
 		
-//		String realFileName = fh.getFileType("SampleFileExcel.xls");
-//		System.out.println(realFileName);
-//		
-//		String realFileName2 = fh.getFileType("SampleFileExcel.xlsx");
-//		System.out.println(realFileName2);
-//		
-//		String realFileName3 = fh.getFileType("SampleFileTiff.tiff");
-//		System.out.println(realFileName3);
-//		
-//		String realFileName4 = fh.getFileType("SampleFileText1.txt");
-//		System.out.println(realFileName4);
 		
 	String fileHeader = "";
 		try {
-			fileHeader = fh.getExcelHeaders2007("SampleFileExcel.xlsx");
+			fileHeader = fh.getExcelHeaders2003("SampleFileExcel.xls");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	//fileHeader = fh.getFileHeaders("SampleFileText1.txt");
+
 		fh.identifyFileBasedOnHeaders(fileHeader);
-		System.out.println(fh.getFileDate("SampleFileExcel.xls"));
 	}
 	public String getFileType(String fileName) {
 		Tika tika = new Tika();
@@ -104,19 +93,18 @@ public class FileHandler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println(headersLine);
 		
 		return headersLine;
 	}
 	
-	public void getExcelHeaders2003(String fileName) throws IOException{
+	public String getExcelHeaders2003(String fileName) throws IOException{
 		Path path = Paths.get(fileDirectory + fileName);
 		  FileInputStream inputStream = new FileInputStream(new File (path.toString()));
 	         
 	        Workbook workbook = new HSSFWorkbook(inputStream);
 	        Sheet firstSheet = workbook.getSheetAt(0);
 	        Iterator<Row> iterator = firstSheet.iterator();
-	         
+	        StringBuilder header = new StringBuilder();
 	            Row nextRow = iterator.next();
 	            Iterator<Cell> cellIterator = nextRow.cellIterator();
 	             
@@ -125,22 +113,21 @@ public class FileHandler {
 	                 
 	                switch (cell.getCellType()) {
 	                    case Cell.CELL_TYPE_STRING:
-	                        System.out.print(cell.getStringCellValue());
+	                    	header.append(cell.getStringCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_BOOLEAN:
-	                        System.out.print(cell.getBooleanCellValue());
+	                    	header.append(cell.getStringCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_NUMERIC:
-	                        System.out.print(cell.getNumericCellValue());
+	                    	header.append(cell.getStringCellValue());
 	                        break;
 	                }
-	                System.out.print(" - ");
 	            }
-	            System.out.println();
 	        
 	         
 	        workbook.close();
 	        inputStream.close();
+	        return header.toString();
 	    }
 
 	
@@ -155,7 +142,6 @@ public class FileHandler {
 	         
 	            Row nextRow = iterator.next();
 	             nextRow = iterator.next();
-	             nextRow = iterator.next();
 	            Iterator<Cell> cellIterator = nextRow.cellIterator();
 	             
 	            while (cellIterator.hasNext()) {
@@ -163,49 +149,44 @@ public class FileHandler {
 	                 
 	                switch (cell.getCellType()) {
 	                    case Cell.CELL_TYPE_STRING:
-	                        System.out.print(cell.getStringCellValue());
+	                    	
 	                        sb.append(cell.getStringCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_BOOLEAN:
-	                        System.out.print(cell.getBooleanCellValue());
 	                        sb.append(cell.getBooleanCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_NUMERIC:
-	                        System.out.print(cell.getNumericCellValue());
 	                        sb.append(cell.getNumericCellValue());
 	                        break;
 	                }
-	                System.out.print(" - ");
 	            }
-	            System.out.println();
 	        	         
 	        workbook.close();
 	        inputStream.close();
 	        
-	        System.out.println(sb.toString());
 	        return sb.toString();
 	    }
 	
-	public void identifyFileBasedOnHeaders(String headersLine){
+	public String identifyFileBasedOnHeaders(String headersLine){
 		String textHeader = "Employer                  Balance Description          Homebanking Status Mobile Banking Status Has EStatements Text                  Hold Amount Open Date  Close Date";
-		String xlsHeader = "application/vnd.ms-excel";
-		String xlsxHeader = "Q1Q2Q3Q4Q5Q6Q7Q8Q9Q10Q11Q12Q13Q14Q15Q16Q17Q18Q19.Q20.Q21.Q22.Q23.ab.c.d.e.Q24.ab.c.d.e.f.g.Q25.ab.c.d.e.f.g.Q26.ab.c.d.e.f.Q27.abcdefghijQ28.abcQ29.abcdefQ30.Q31.Q32.Q33.abcdea.2b.2c.2d.2e.2Q34.abcdefghijklmnoQ35Q36Q37Q38Q39Q40Q41.abcdefQ42.abc";
-		
-		//we made use of the compareTo method so it compares the value of the String rather than the string itself
-		
+		String xlsHeader = "Uniqe IDUsernameFirst NameLast NameProgram SiteTotal no. of loginsLength of loginsIs Expense Tracker completedIs My Budget completedIs Saving Generator completed";
+		String xlsxHeader = "Q1Q2Q3Q4Q5Q6Q7Q8Q9Q10Q11Q12Q13Q14Q15Q16Q17Q18Q19.Q20.Q21.Q22.Q23.ab.c.d.e.Q24.ab.c.d.e.f.g.Q25.ab.c.d.e.f.g.Q26.ab.c.d.e.f.Q27.abcdefghijQ28.abcQ29.abcdefghQ30Q31Q32Q33a.bcdefghijklmnopqrst";
+
+		String fileType;
 		if (headersLine.compareTo(textHeader) == 0){
-			System.out.println("this is a text file");
+			fileType = "this is a text file";
 		}
 		else if(headersLine.compareTo(xlsHeader) == 0){
-			System.out.println("this is an xls file");
-		}
-		else if(headersLine.compareTo(xlsxHeader) == 0){
-			System.out.println("this is an xlsx file");
-		}
-		else{
-			System.out.println("invalid file type");
+			fileType = "this is an xls file";
 
 		}
+		else if(headersLine.compareTo(xlsxHeader) == 0){
+			fileType = "this is an xlsx file";
+		}
+		else{
+			fileType = "invalid file type";
+		}
+		return fileType;
 	}
 	public String getFileDate(String fileName) {
 		Path path = Paths.get(fileDirectory + fileName);

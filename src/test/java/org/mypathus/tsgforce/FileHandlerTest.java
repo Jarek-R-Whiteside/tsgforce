@@ -62,28 +62,27 @@ public class FileHandlerTest {
 	public void identifyTextBasedOnHeadersTest() {
 		String fileHeader = "";
 		fileHeader = fileHandler.getFileHeaders(fileName1);
-		fileHandler.identifyFileBasedOnHeaders(fileHeader);
 		
+		
+		assertEquals("this is a text file", fileHandler.identifyFileBasedOnHeaders(fileHeader));
 		assertNotNull(fileHeader);
 		assertNotEquals("", fileHeader);
 	}
 	
-// before we can test this method with xls, we need to change the method from void to String return type in FileHandler.java
-//	
-//	@Test
-//	public void identifyExcel2003BasedOnHeadersTest() {
-//		String fileHeader = "";
-//		try {
-//			fileHeader = fileHandler.getExcelHeaders2003(fileName3);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		fileHandler.identifyFileBasedOnHeaders(fileHeader);
-//		
-//		assertNotNull(fileHeader);
-//		assertNotEquals("", fileHeader);
-//	}
+	@Test
+	public void identifyExcel2003BasedOnHeadersTest() {
+		String fileHeader = "";
+		String fileType;
+		try {
+			fileHeader = fileHandler.getExcelHeaders2003(fileName3);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		fileType = fileHandler.identifyFileBasedOnHeaders(fileHeader);
+		assertEquals("this is an xls file", fileType);
+		assertNotNull(fileHeader);
+		assertNotEquals("", fileHeader);
+	}
 	
 	@Test
 	public void identifyExcel2007BasedOnHeadersTest() {
@@ -94,8 +93,9 @@ public class FileHandlerTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		fileHandler.identifyFileBasedOnHeaders(fileHeader);
+
 		
+		assertEquals("this is an xlsx file", fileHandler.identifyFileBasedOnHeaders(fileHeader));
 		assertNotNull(fileHeader);
 		assertNotEquals("", fileHeader);
 	}
