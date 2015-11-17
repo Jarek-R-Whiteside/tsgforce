@@ -3,12 +3,15 @@ package org.mypathus.tsgforce;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
-
 import org.junit.Test;
 
 
 public class FileHandlerTest {
 	FileHandler fileHandler = new FileHandler();
+	TextFile textFile = new TextFile();
+	Excel2003File excel2003 = new Excel2003File();
+	Excel2007File excel2007 = new Excel2007File();
+	
 	String fileName1 = "SampleFileText1.txt";
 	String fileName2 = "SampleFileText2.txt";
 	String fileName3 = "SampleFileExcel.xls";
@@ -40,31 +43,17 @@ public class FileHandlerTest {
 	@Test
 	public void getFileTimeStampTest() {
 		String expectedDate = "08/04/2014 08:00";
-		String actualDate = fileHandler.getFileTimeStamp(fileName1);
+		String actualDate = fileHandler.getTimeStampInFile(fileName1);
 		assertEquals(expectedDate, actualDate);
-	}
-	
-	@Test
-	public void getFileHeadersTest() {
-		String fileHeaders = fileHandler.getFileHeaders(fileName1);
-		assertNotNull(fileHeaders);
-		assertNotEquals("", fileHeaders);
-	}
-	
-	@Test
-	public void getExcelHeaders2007Test() throws IOException {
-		String excelHeader = fileHandler.getExcelHeaders2007(fileName4);
-		assertNotNull(excelHeader);
-		assertNotEquals("", excelHeader);
 	}
 	
 	@Test
 	public void identifyTextBasedOnHeadersTest() {
 		String fileHeader = "";
-		fileHeader = fileHandler.getFileHeaders(fileName1);
+		fileHeader = textFile.getTextFileHeaders(fileName1);
 		
 		
-		assertEquals("this is a text file", fileHandler.identifyFileBasedOnHeaders(fileHeader));
+		assertEquals("this is a text file", fileHandler.identifyFileStructure(fileHeader));
 		assertNotNull(fileHeader);
 		assertNotEquals("", fileHeader);
 	}
@@ -74,11 +63,11 @@ public class FileHandlerTest {
 		String fileHeader = "";
 		String fileType;
 		try {
-			fileHeader = fileHandler.getExcelHeaders2003(fileName3);
+			fileHeader = excel2003.getExcelHeaders2003(fileName3);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		fileType = fileHandler.identifyFileBasedOnHeaders(fileHeader);
+		fileType = fileHandler.identifyFileStructure(fileHeader);
 		assertEquals("this is an xls file", fileType);
 		assertNotNull(fileHeader);
 		assertNotEquals("", fileHeader);
@@ -88,20 +77,14 @@ public class FileHandlerTest {
 	public void identifyExcel2007BasedOnHeadersTest() {
 		String fileHeader = "";
 		try {
-			fileHeader = fileHandler.getExcelHeaders2007(fileName4);
+			fileHeader = excel2007.getExcelHeaders2007(fileName4);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		
-		assertEquals("this is an xlsx file", fileHandler.identifyFileBasedOnHeaders(fileHeader));
+		assertEquals("this is an xlsx file", fileHandler.identifyFileStructure(fileHeader));
 		assertNotNull(fileHeader);
 		assertNotEquals("", fileHeader);
 	}
 	
-
-	
-	// I know the output is ugly, this is my first time working with JUNIT testing,
-	// I need to come up with a way to clean it up. - Trevor
 }
