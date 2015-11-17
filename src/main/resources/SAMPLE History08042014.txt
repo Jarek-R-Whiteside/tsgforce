@@ -1,0 +1,298 @@
+08/04/2014 08:00                                                                                                   08/04/2014 Page 1
+Database Production                                                                                                   Eff 08/04/2014
+
+                                           Transaction Posting
+Description          Description                Amount Date       Text
+==================== ==================== ============ ========== ====================
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.14
+                     Share Deposit              $25.00 01/21/2014
+                     WebTeller Withdrawal     ($25.00) 01/23/2014
+                     WebTeller Deposit          $25.00 01/23/2014
+                     WebTeller Withdrawal    ($245.00) 01/23/2014
+                     WebTeller Deposit          $25.00 01/23/2014
+                     WebTeller Deposit         $220.00 01/23/2014
+                     WebTeller Deposit          $40.00 02/05/2014
+                     WebTeller Withdrawal     ($40.00) 02/05/2014
+                     Share Deposit              $24.00 02/21/2014
+                     Share Deposit              $18.00 03/12/2014
+                     WebTeller Deposit          $20.00 03/14/2014
+                     Share Deposit              $18.00 05/06/2014
+                     Share Deposit              $27.00 05/23/2014
+                     Dividend                    $0.01 05/31/2014
+                     Share Deposit              $29.70 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $34.00 07/21/2014
+                     Dividend                    $0.01 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.13
+                     Share Deposit              $26.50 01/21/2014
+                     Share Deposit              $40.50 02/12/2014
+                     Share Deposit              $35.50 03/12/2014
+                     Dividend                    $0.01 03/31/2014
+                     Dividend                    $0.01 04/30/2014
+                     Share Deposit              $28.50 05/02/2014
+                     Share Deposit              $48.50 05/23/2014
+                     Dividend                    $0.01 05/31/2014
+                     Share Deposit              $37.50 06/20/2014
+                     Dividend                    $0.02 06/30/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.02
+                     Share Deposit              $18.00 01/21/2014
+                     Share Deposit              $12.00 02/28/2014
+                     Share Deposit              $18.00 03/12/2014
+                     Share Deposit              $18.00 04/22/2014
+                     Share Deposit              $29.00 05/23/2014
+                     Share Deposit              $49.40 06/20/2014
+                     Share Deposit              $12.00 07/29/2014
+                     E-Branch Deposit           $20.00 07/29/2014
+                     E-Branch Deposit            $4.00 07/29/2014
+                     Dividend                    $0.01 07/31/2014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+08/04/2014 08:00                                                                                                   08/04/2014 Page 2
+Database Production                                                                                                   Eff 08/04/2014
+
+                                           Transaction Posting
+Description          Description                Amount Date       Text
+==================== ==================== ============ ========== ====================
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.21
+                     Share Deposit             $120.00 01/21/2014
+                     Share Deposit             $120.00 02/12/2014
+                     Dividend                    $0.01 02/28/2014
+                     Share Deposit             $120.00 03/12/2014
+                     Dividend                    $0.03 03/31/2014
+                     Dividend                    $0.03 04/30/2014
+                     Share Deposit             $150.00 05/06/2014
+                     Share Deposit             $170.00 05/23/2014
+                     Dividend                    $0.05 05/31/2014
+                     Share Deposit             $135.00 06/20/2014
+                     Dividend                    $0.06 06/30/2014
+                     Share Deposit              $34.00 07/17/2014
+                     Dividend                    $0.07 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.06
+                     Share Deposit              $12.00 01/21/2014
+                     Share Deposit              $24.00 02/21/2014
+                     Share Deposit              $24.00 03/12/2014
+                     Share Deposit              $12.00 05/02/2014
+                     Share Deposit              $12.00 05/23/2014
+                     Share Deposit              $84.00 07/17/2014
+                     Dividend                    $0.01 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.01
+                     Share Deposit              $24.00 01/21/2014
+                     Share Deposit              $24.00 02/12/2014
+                     Share Deposit              $24.00 03/12/2014
+                     Share Deposit              $24.00 04/22/2014
+                     Share Deposit              $30.00 05/23/2014
+                     Share Deposit              $24.00 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $24.00 07/17/2014
+                     Dividend                    $0.01 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/07/2014 34TT02.15
+                     Share Deposit              $18.00 01/21/2014
+                     Share Deposit              $24.00 02/12/2014
+                     Share Deposit             $162.00 03/12/2014
+                     Share Deposit              $18.00 03/12/2014
+                     Share Withdrawal Tra    ($162.00) 03/20/2014
+                     Share Deposit              $18.00 04/22/2014
+                     Share Deposit              $31.00 05/23/2014
+                     Share Deposit              $32.40 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $28.60 07/17/2014
+                     Dividend                    $0.01 07/31/2014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+08/04/2014 08:00                                                                                                   08/04/2014 Page 3
+Database Production                                                                                                   Eff 08/04/2014
+
+                                           Transaction Posting
+Description          Description                Amount Date       Text
+==================== ==================== ============ ========== ====================
+MY PATH              New Share Deposit           $0.00 01/08/2014 34TT02.17
+                     Share Deposit             $120.00 01/21/2014
+                     Share Deposit             $120.00 02/12/2014
+                     Dividend                    $0.01 02/28/2014
+                     Share Deposit              $90.00 03/12/2014
+                     Dividend                    $0.03 03/31/2014
+                     Share Deposit             $120.00 04/22/2014
+                     Dividend                    $0.03 04/30/2014
+                     Share Deposit             $125.00 05/23/2014
+                     Dividend                    $0.04 05/31/2014
+                     Share Deposit             $146.40 06/20/2014
+                     Dividend                    $0.05 06/30/2014
+                     Share Deposit             $130.00 07/17/2014
+                     Dividend                    $0.07 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/21/2014 34TT02.16
+                     Share Deposit              $22.00 01/21/2014
+                     Share Deposit              $28.50 02/28/2014
+                     Share Deposit              $21.00 03/12/2014
+                     Share Deposit              $28.00 05/02/2014
+                     Share Deposit              $31.00 05/23/2014
+                     Share Deposit              $39.00 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $30.00 07/17/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/21/2014 34TT02.09
+                     Share Deposit              $25.00 01/21/2014
+                     Share Deposit              $31.00 02/28/2014
+                     Share Deposit              $28.50 03/12/2014
+                     Share Deposit              $21.00 05/02/2014
+                     Share Deposit              $41.00 05/23/2014
+                     Dividend                    $0.01 05/31/2014
+                     Share Deposit              $37.50 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $32.50 07/17/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/23/2014 34TT02.07
+                     Share Deposit              $18.00 01/23/2014
+                     Share Deposit              $26.00 02/21/2014
+                     Share Deposit              $31.00 03/12/2014
+                     Share Deposit              $18.00 04/22/2014
+                     Share Deposit              $18.00 05/23/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $58.50 07/17/2014
+                     Dividend                    $0.01 07/31/2014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+08/04/2014 08:00                                                                                                   08/04/2014 Page 4
+Database Production                                                                                                   Eff 08/04/2014
+
+                                           Transaction Posting
+Description          Description                Amount Date       Text
+==================== ==================== ============ ========== ====================
+MY PATH              New Share Deposit           $0.00 01/23/2014 34TT02.12
+                     Share Deposit              $40.80 01/23/2014
+                     Share Deposit              $40.80 02/12/2014
+                     Share Deposit              $52.70 03/12/2014
+                     Dividend                    $0.01 03/31/2014
+                     Dividend                    $0.01 04/30/2014
+                     Share Deposit              $51.00 05/02/2014
+                     Share Deposit              $18.00 05/02/2014
+                     Share Deposit            ($18.00) 05/02/2014
+                     Share Deposit              $45.90 05/23/2014
+                     Dividend                    $0.02 05/31/2014
+                     Share Deposit              $45.90 06/20/2014
+                     Dividend                    $0.02 06/30/2014
+                     Share Deposit              $34.00 07/17/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/23/2014 34TT02.04
+                     Share Deposit              $24.00 01/23/2014
+                     Share Deposit              $54.00 03/12/2014
+                     Share Deposit              $18.00 05/02/2014
+                     Share Deposit              $18.00 05/23/2014
+                     Share Deposit              $39.90 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $18.00 07/29/2014
+                     Dividend                    $0.01 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/23/2014 34TT02.05
+                     Share Deposit              $40.80 01/23/2014
+                     Share Deposit              $40.80 02/12/2014
+                     Share Deposit              $49.30 03/12/2014
+                     Dividend                    $0.01 03/31/2014
+                     Share Deposit              $40.80 04/22/2014
+                     Dividend                    $0.01 04/30/2014
+                     Share Deposit              $30.60 05/23/2014
+                     Dividend                    $0.02 05/31/2014
+                     Dividend                    $0.02 06/30/2014
+                     Share Deposit              $84.00 07/17/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 01/24/2014 34TT02.11
+                     Share Deposit              $38.50 01/27/2014
+MY PATH              New Share Deposit           $0.00 01/24/2014 34TT02.10
+                     Share Deposit              $74.88 01/27/2014
+                     Share Deposit              $99.84 02/12/2014
+                     Dividend                    $0.01 02/28/2014
+                     Share Deposit              $99.84 03/21/2014
+                     Dividend                    $0.02 03/31/2014
+                     Share Deposit              $99.84 04/22/2014
+                     Dividend                    $0.03 04/30/2014
+                     Share Deposit              $74.88 05/23/2014
+                     Dividend                    $0.03 05/31/2014
+                     Share Deposit              $74.88 06/20/2014
+                     Dividend                    $0.04 06/30/2014
+                     Share Deposit             $176.40 07/17/2014
+                     Dividend                    $0.05 07/31/2014
+
+
+
+
+
+
+
+08/04/2014 08:00                                                                                                   08/04/2014 Page 5
+Database Production                                                                                                   Eff 08/04/2014
+
+                                           Transaction Posting
+Description          Description                Amount Date       Text
+==================== ==================== ============ ========== ====================
+MY PATH              New Share Deposit           $0.00 01/24/2014 34TT02.22
+                     Share Deposit              $26.00 01/24/2014
+                     Share Deposit              $40.50 02/21/2014
+                     Share Deposit              $35.50 03/12/2014
+                     Dividend                    $0.01 03/31/2014
+                     Dividend                    $0.01 04/30/2014
+                     Share Deposit              $28.50 05/02/2014
+                     Share Deposit              $38.50 05/23/2014
+                     Dividend                    $0.01 05/31/2014
+                     Share Deposit              $34.50 06/20/2014
+                     Dividend                    $0.01 06/30/2014
+                     Share Deposit              $32.50 07/17/2014
+                     Share Deposit              $32.50 07/17/2014
+                     Dividend                    $0.02 07/31/2014
+MY PATH              New Share Deposit           $0.00 02/12/2014 34TT02.08
+                     Share Deposit              $24.00 02/12/2014
+                     Share Deposit              $24.00 02/28/2014
+                     Share Deposit              $12.00 03/12/2014
+                     Share Deposit              $18.00 04/22/2014
+                     Share Deposit              $18.00 05/23/2014
+                     Share Deposit              $24.00 06/20/2014
+                     Share Deposit              $48.00 07/29/2014
+                     Dividend                    $0.01 07/31/2014
+MY PATH              New Share Deposit           $0.00 02/12/2014 34TT02.18
+                     Share Deposit              $18.00 02/12/2014
+                     Share Deposit              $24.00 02/28/2014
+                     Share Deposit              $12.00 03/12/2014
+                     Share Deposit              $18.00 04/22/2014
+                     Share Deposit              $12.00 05/23/2014
+                     Share Deposit              $24.00 06/20/2014
+                     Share Deposit              $60.00 07/17/2014
+                     Dividend                    $0.01 07/31/2014
