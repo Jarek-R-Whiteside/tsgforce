@@ -11,9 +11,9 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import org.apache.tika.Tika;
 
-public class FileHandler {
+public class GenericFileHandler {
 	
-	private String fileDirectory = FileContainer.getFileDirectory();
+	private String fileDirectory = FilesContainer.getFileDirectory();
 	
 	public static void main(String[] args) {
 

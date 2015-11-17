@@ -6,8 +6,8 @@ import java.io.IOException;
 import org.junit.Test;
 
 
-public class FileHandlerTest {
-	FileHandler fileHandler = new FileHandler();
+public class GenericFileHandlerTest {
+	GenericFileHandler fileHandler = new GenericFileHandler();
 	TextFile textFile = new TextFile();
 	Excel2003File excel2003 = new Excel2003File();
 	Excel2007File excel2007 = new Excel2007File();
