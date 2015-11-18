@@ -14,7 +14,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
 public class Excel2003File {
-	
 	private String fileDirectory = FileContainer.getFileDirectory();
 	
 	public String getExcelHeaders2003(String fileName) throws IOException{

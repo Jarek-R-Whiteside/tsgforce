@@ -13,7 +13,7 @@ import org.apache.tika.Tika;
 
 public class GenericFileHandler {
 	
-	private String fileDirectory = FilesContainer.getFileDirectory();
+	private String fileDirectory = FileContainer.getFileDirectory();
 	
 	public static void main(String[] args) {
 

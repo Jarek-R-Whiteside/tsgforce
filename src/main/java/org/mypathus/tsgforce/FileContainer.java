@@ -1,6 +1,6 @@
 package org.mypathus.tsgforce;
 
-public class FilesContainer {
+public class FileContainer {
 	private static String fileDirectory = "./src/main/resources/";
 	
 	public static String getFileDirectory() {
