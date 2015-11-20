@@ -1,6 +1,6 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.model;
 
-public class SampleText1 {
+public class TemplateTextBalance {
 	String employer;
 	double balance;
 	String description;

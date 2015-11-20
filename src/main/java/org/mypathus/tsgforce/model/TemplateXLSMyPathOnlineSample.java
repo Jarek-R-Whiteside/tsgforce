@@ -1,6 +1,6 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.model;
 
-public class SampleXLS {
+public class TemplateXLSMyPathOnlineSample {
 	String uniqueID;
 	String userName;
 	String firstName;

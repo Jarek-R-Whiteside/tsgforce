@@ -1,4 +1,4 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.processing;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,9 +12,12 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.mypathus.tsgforce.FileContainer;
 
 public class Excel2007File {
 
+	static String rowsToLookAt = "3,5";
+	
 	private String fileDirectory = FileContainer.getFileDirectory();
 //	public static void main (String[] args) {
 //		Excel2007File ef = new Excel2007File();
@@ -46,7 +49,6 @@ public class Excel2007File {
 	                 
 	                switch (cell.getCellType()) {
 	                    case Cell.CELL_TYPE_STRING:
-	                    	
 	                        sb.append(cell.getStringCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_BOOLEAN:

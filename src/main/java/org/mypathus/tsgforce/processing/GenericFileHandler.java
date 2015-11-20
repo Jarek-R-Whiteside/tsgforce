@@ -1,4 +1,4 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.processing;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import org.apache.tika.Tika;
+import org.mypathus.tsgforce.FileContainer;
 
 public class GenericFileHandler {
 	

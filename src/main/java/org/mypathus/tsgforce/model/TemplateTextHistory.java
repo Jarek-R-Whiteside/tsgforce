@@ -1,6 +1,6 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.model;
 
-public class SampleText2 {
+public class TemplateTextHistory {
 	String organization;
 	String description;
 	double amount;
