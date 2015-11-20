@@ -10,24 +10,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import org.apache.tika.Tika;
-import org.mypathus.tsgforce.FileContainer;
+import org.mypathus.tsgforce.resources.FileContainer;
 
 public class GenericFileHandler {
-	
-	private String fileDirectory = FileContainer.getFileDirectory();
-	private static String fileDirectory2 = FileContainer.getFileDirectory();
-	
-	public static void main(String[] args) {
-		System.out.println(GenericFileHandler.getFileType("individual level login statistics.xls"));
-		System.out.println(GenericFileHandler.getFileType("registerd users.xlsx"));
-		System.out.println(GenericFileHandler.getFileType("SAMPLE Balances08042014.txt"));
-		
-	}
-	
+
+	private static String fileDirectory = FileContainer.getFileDirectory();
+
 	public static String getFileType(String fileName) {
 		Tika tika = new Tika();
-		Path path = Paths.get(fileDirectory2 + fileName);
-		String fileType  = "";
+		Path path = Paths.get(fileDirectory + fileName);
+		String fileType = "";
 		try {
 			fileType = tika.detect(path);
 		} catch (IOException e) {
@@ -35,8 +27,8 @@ public class GenericFileHandler {
 		}
 		return fileType;
 	}
-	
-	public String getFileMD5(String fileName) {
+
+	public static String getFileMD5(String fileName) {
 		String md5 = "";
 		try {
 			FileInputStream fis = new FileInputStream(new File(fileDirectory + fileName));
@@ -49,7 +41,7 @@ public class GenericFileHandler {
 		}
 		return md5;
 	}
-	
+
 	public String getFileCreationDate(String fileName) {
 		Path path = Paths.get(fileDirectory + fileName);
 		try {
@@ -58,9 +50,9 @@ public class GenericFileHandler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return "Invalid File";
+		return null;
 	}
-	
+
 	public String getTimeStampInFile(String fileName) {
 		String timeStamp = "";
 		Path path = Paths.get(fileDirectory + fileName);
@@ -75,28 +67,5 @@ public class GenericFileHandler {
 		}
 		return timeStamp;
 	}
-
-	public String identifyFileStructure(String headersLine){
-		String textHeader = "Employer                  Balance Description          Homebanking Status Mobile Banking Status Has EStatements Text                  Hold Amount Open Date  Close Date";
-		String xlsHeader = "Uniqe IDUsernameFirst NameLast NameProgram SiteTotal no. of loginsLength of loginsIs Expense Tracker completedIs My Budget completedIs Saving Generator completed";
-		String xlsxHeader = "Q1Q2Q3Q4Q5Q6Q7Q8Q9Q10Q11Q12Q13Q14Q15Q16Q17Q18Q19.Q20.Q21.Q22.Q23.ab.c.d.e.Q24.ab.c.d.e.f.g.Q25.ab.c.d.e.f.g.Q26.ab.c.d.e.f.Q27.abcdefghijQ28.abcQ29.abcdefghQ30Q31Q32Q33a.bcdefghijklmnopqrst";
-
-		String fileType;
-		if (headersLine.compareTo(textHeader) == 0){
-			fileType = "this is a text file";
-		}
-		else if(headersLine.compareTo(xlsHeader) == 0){
-			fileType = "this is an xls file";
-
-		}
-		else if(headersLine.compareTo(xlsxHeader) == 0){
-			fileType = "this is an xlsx file";
-		}
-		else{
-			fileType = "invalid file type";
-		}
-		return fileType;
-	}
-	
 
 }

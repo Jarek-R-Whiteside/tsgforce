@@ -1,4 +1,4 @@
-package org.mypathus.tsgforce;
+package org.mypathus.tsgforce.resources;
 
 public class FileContainer {
 	private static String fileDirectory = "./src/main/resources/";

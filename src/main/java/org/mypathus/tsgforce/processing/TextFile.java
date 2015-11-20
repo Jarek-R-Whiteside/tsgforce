@@ -6,15 +6,15 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.mypathus.tsgforce.FileContainer;
+import org.mypathus.tsgforce.resources.FileContainer;
 
 public class TextFile {
 	
 	private String fileDirectory = FileContainer.getFileDirectory();
-	public static void main (String[] args) {
-//		TextFile ef = new TextFile();
-//		String header = ef.getTextFileHeaders("SAMPLE History08042014.txt");
-//		System.out.println(header);
+	
+	public static void main(String[] args) {
+		TextFile tf = new TextFile();
+		System.out.println(tf.getTextFileHeaders("SampleFileText1.txt", 5));
 	}
 	
 	public String getTextFileHeaders(String fileName, Integer row) {
@@ -22,7 +22,7 @@ public class TextFile {
 		String headersLine = "";
 		try {
 			BufferedReader reader = Files.newBufferedReader(path);
-			for(int i = 0; i<row; i++) {
+			for(int i = 1; i<row; i++) {
 				reader.readLine();
 			}
 			headersLine = reader.readLine();
