@@ -15,7 +15,18 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 public class Excel2003File {
 	private String fileDirectory = FileContainer.getFileDirectory();
-	
+//	public static void main (String[] args) {
+//		Excel2003File ef = new Excel2003File();
+//		
+//		try {
+//			String header = ef.getExcelHeaders2003("MyPathOnline SAMPLE.xls");
+//			System.out.println(header);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//	}
 	public String getExcelHeaders2003(String fileName) throws IOException{
 		Path path = Paths.get(fileDirectory + fileName);
 		  FileInputStream inputStream = new FileInputStream(new File (path.toString()));

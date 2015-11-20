@@ -16,7 +16,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel2007File {
 
 	private String fileDirectory = FileContainer.getFileDirectory();
-
+//	public static void main (String[] args) {
+//		Excel2007File ef = new Excel2007File();
+//		
+//		try {
+//			String header = ef.getExcelHeaders2007("registerd users.xlsx");
+//			System.out.println(header);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//	}
 	public String getExcelHeaders2007(String fileName) throws IOException{
 		Path path = Paths.get(fileDirectory + fileName);
 		  FileInputStream inputStream = new FileInputStream(new File (path.toString()));

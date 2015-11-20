@@ -14,14 +14,18 @@ import org.apache.tika.Tika;
 public class GenericFileHandler {
 	
 	private String fileDirectory = FileContainer.getFileDirectory();
+	private static String fileDirectory2 = FileContainer.getFileDirectory();
 	
 	public static void main(String[] args) {
-
+		System.out.println(GenericFileHandler.getFileType("individual level login statistics.xls"));
+		System.out.println(GenericFileHandler.getFileType("registerd users.xlsx"));
+		System.out.println(GenericFileHandler.getFileType("SAMPLE Balances08042014.txt"));
+		
 	}
 	
-	public String getFileType(String fileName) {
+	public static String getFileType(String fileName) {
 		Tika tika = new Tika();
-		Path path = Paths.get(fileDirectory + fileName);
+		Path path = Paths.get(fileDirectory2 + fileName);
 		String fileType  = "";
 		try {
 			fileType = tika.detect(path);
