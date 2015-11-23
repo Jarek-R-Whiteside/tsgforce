@@ -13,6 +13,9 @@ public class ReportIdentifier {
 		else if("application/vnd.ms-excel".equals(fileType)) {
 			return HeaderMappingDao.getXLSReportLayout(fileName);
 		}
+		else if("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet/vnd.ms-excel".equals(fileType)) {
+			return HeaderMappingDao.getXLSXReportLayout(fileName);
+		}
     	else {
     		return null;
     	}
