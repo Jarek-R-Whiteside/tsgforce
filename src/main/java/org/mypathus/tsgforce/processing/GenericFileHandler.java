@@ -16,6 +16,11 @@ public class GenericFileHandler {
 
 	private static String fileDirectory = FileContainer.getFileDirectory();
 
+	public static void main(String[] args) {
+		System.out.println(GenericFileHandler.getFileType("SampleFileExcel.xls"));
+		System.out.println(GenericFileHandler.getFileType("SampleFileExcel.xlsx"));
+	}
+	
 	public static String getFileType(String fileName) {
 		Tika tika = new Tika();
 		Path path = Paths.get(fileDirectory + fileName);

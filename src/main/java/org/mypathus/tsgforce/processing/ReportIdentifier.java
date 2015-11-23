@@ -10,8 +10,12 @@ public class ReportIdentifier {
 		if("text/plain".equals(fileType)){
     		return HeaderMappingDao.getTextReportLayout(fileName);
     	}
+		else if("application/vnd.ms-excel".equals(fileType)) {
+			return HeaderMappingDao.getXLSReportLayout(fileName);
+		}
     	else {
     		return null;
     	}
     }
+	
 }
