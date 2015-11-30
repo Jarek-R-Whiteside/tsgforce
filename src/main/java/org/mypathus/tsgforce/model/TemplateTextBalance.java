@@ -11,6 +11,7 @@ public class TemplateTextBalance {
 	double holdAmount;
 	String openDate;
 	String closeDate;
+	
 	public String getEmployer() {
 		return employer;
 	}

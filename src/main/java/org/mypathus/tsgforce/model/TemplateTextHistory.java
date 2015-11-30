@@ -5,6 +5,7 @@ public class TemplateTextHistory {
 	String description;
 	double amount;
 	String aText;
+	
 	public String getOrganization() {
 		return organization;
 	}
