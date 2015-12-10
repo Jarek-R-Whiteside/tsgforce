@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="org.mypathus.tsgforce.model.TemplateTextHistory" table="history_text_report">
+      <meta attribute="class-description">
+         This class contains the Balance files detail. 
+      </meta>
+      <id name="id" column="id" type="integer">
+         <generator class="native"/>
+      </id>
+      <property name="organization" column="organization" type="string"/>
+      <property name="description" column="description" type="string"/>
+      <property name="amount" column="amount" type="double"/>
+      <property name="aText" column="aText" type="string"/>
+      <property name="postingDate" column="postingDate" type="string"/>
+   </class>
+</hibernate-mapping>

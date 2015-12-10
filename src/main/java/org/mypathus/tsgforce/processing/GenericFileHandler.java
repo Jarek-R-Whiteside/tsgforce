@@ -47,7 +47,7 @@ public class GenericFileHandler {
 		return md5;
 	}
 
-	public String getFileCreationDate(String fileName) {
+	public static String getFileCreationDate(String fileName) {
 		Path path = Paths.get(fileDirectory + fileName);
 		try {
 			BasicFileAttributes fileAttr = Files.readAttributes(path, BasicFileAttributes.class);
@@ -58,7 +58,7 @@ public class GenericFileHandler {
 		return null;
 	}
 
-	public String getTimeStampInFile(String fileName) {
+	public static String getTimeStampInFile(String fileName) {
 		String timeStamp = "";
 		Path path = Paths.get(fileDirectory + fileName);
 		try {
@@ -72,5 +72,7 @@ public class GenericFileHandler {
 		}
 		return timeStamp;
 	}
+	
+	
 
 }

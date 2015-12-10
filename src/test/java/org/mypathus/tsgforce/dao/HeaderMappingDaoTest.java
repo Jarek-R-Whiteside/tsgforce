@@ -3,6 +3,7 @@ package org.mypathus.tsgforce.dao;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.mypathus.tsgforce.model.ReportIdentificationHelper;
 
 public class HeaderMappingDaoTest {
 	
@@ -12,25 +13,11 @@ public class HeaderMappingDaoTest {
 	
 	@Test
 	public void getTextReportLayoutTest() {
-		String actualId = HeaderMappingDao.getTextReportLayout(balances);
-		String expectedId = "balances";
+		ReportIdentificationHelper helper = HeaderMappingDao.getTextReportLayout(balances);
+		int actualId = helper.getId();
+		int expectedId = 1;
 				
 		assertEquals(expectedId, actualId);
 	}
-	
-	@Test
-	public void getXLSReportLayoutTest() {
-		String actualId = HeaderMappingDao.getXLSReportLayout(myPathOnlineSample);
-		String expectedId = "myPathOnlineSample";
-				
-		assertEquals(expectedId, actualId);
-	}
-	
-	@Test
-	public void getXLSXReportLayoutTest() {
-		String actualId = HeaderMappingDao.getXLSXReportLayout(survey);
-		String expectedId = "survey";
-				
-		assertEquals(expectedId, actualId);
-	}
+
 }

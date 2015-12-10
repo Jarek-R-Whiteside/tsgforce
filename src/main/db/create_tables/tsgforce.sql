@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `mapping` (
   `report_id` varchar(3) NOT NULL,
-  `field_id` varchar(35) NOT NULL,
+  `field_name` varchar(35) NOT NULL,
   `start_pos` int(3) NOT NULL,
   `end_pos` int(3) NOT NULL,
   `destination` varchar(45) NOT NULL,
-  PRIMARY KEY (`report_id`,`field_id`)
+  PRIMARY KEY (`report_id`,`field_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

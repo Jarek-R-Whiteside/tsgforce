@@ -1,11 +1,25 @@
 package org.mypathus.tsgforce.model;
 
 public class TemplateTextHistory {
-	String organization;
-	String description;
-	double amount;
-	String aText;
+	private int id;
+	private String organization;
+	private String description;
+	private double amount;
+	private String aText;
+	private String postingDate;
 	
+	public int getId(){
+		return id;
+	}
+	public void setId(int id){
+		this.id = id;
+	}
+	public String getPostingDate() {
+		return postingDate;
+	}
+	public void setPostingDate(String postingDate) {
+		this.postingDate = postingDate;
+	}
 	public String getOrganization() {
 		return organization;
 	}

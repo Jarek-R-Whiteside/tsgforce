@@ -1,17 +1,24 @@
 package org.mypathus.tsgforce.model;
 
 public class TemplateTextBalance {
-	String employer;
-	double balance;
-	String description;
-	String homebankingStatus;
-	String mobileBankingStatus;
-	String hasEstatements;
-	String aText;
-	double holdAmount;
-	String openDate;
-	String closeDate;
+	private int id;
+	private String employer;
+	private double balance;
+	private String description;
+	private String homebankingStatus;
+	private String mobileBankingStatus;
+	private String hasEstatements;
+	private String aText;
+	private double holdAmount;
+	private String openDate;
+	private String closeDate;
 	
+	public int getId(){
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getEmployer() {
 		return employer;
 	}

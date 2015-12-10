@@ -2,18 +2,18 @@ package org.mypathus.tsgforce.model;
 
 public class ReportIdentificationHelper {
 
+	private int id;
 	private String type;
 	private String header;
 	private String name;
 	private int row;
-	
-	public ReportIdentificationHelper(String type, String header, String name, int row) {
-		this.type = type;
-		this.header = header;
-		this.name = name;
-		this.row = row;
+		
+	public int getId() {
+		return id;
 	}
-	
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getType() {
 		return type;
 	}
