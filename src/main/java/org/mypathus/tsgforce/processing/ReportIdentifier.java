@@ -1,24 +1,29 @@
 package org.mypathus.tsgforce.processing;
 
 import org.mypathus.tsgforce.dao.HeaderMappingDao;
+import org.mypathus.tsgforce.model.ReportIdentificationHelper;
 
 
 public class ReportIdentifier {
  
 	
 	public static int identifyReportByHeader(String fileType, String fileName){
+		return getIdentificationHelper(fileType, fileName).getId();
+    }
+	
+	public static ReportIdentificationHelper getIdentificationHelper(String fileType, String fileName){
 		if("text/plain".equals(fileType)){
-    		return HeaderMappingDao.getTextReportLayout(fileName).getId();
+    		return HeaderMappingDao.getTextIdentificationHelper(fileName);
     	}
 		else if("application/vnd.ms-excel".equals(fileType)) {
-			return HeaderMappingDao.getXLSReportLayout(fileName).getId();
+			return HeaderMappingDao.getXLSIdentificationHelper(fileName);
 		}
 		else if("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet/vnd.ms-excel".equals(fileType)) {
-			return HeaderMappingDao.getXLSXReportLayout(fileName).getId();
+			return HeaderMappingDao.getXLSXIdentificationHelper(fileName);
 		}
     	else {
-    		return -1;
+    		return null;
     	}
-    }
+	}
 	
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="org.mypathus.tsgforce.model.HeaderFieldMapping" table="mapping">
+      <meta attribute="class-description">
+         This class contains the Balance files detail. 
+      </meta>
+      <id name="id" column="id" type="integer">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="field_name" type="string"/>
+      <property name="startPos" column="start_pos" type="int"/>
+      <property name="endPos" column="end_pos" type="int"/>
+      <property name="destination" column="destination" type="string"/>
+   </class>
+</hibernate-mapping>

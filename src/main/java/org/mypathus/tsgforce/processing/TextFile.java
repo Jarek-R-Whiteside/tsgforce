@@ -33,5 +33,11 @@ public class TextFile {
 		return headersLine;
 	}
 	
+	//method to iterate lines
+	//method to process each line
+	
+	
+	
+	
 	//TODO process delimited files (pass delimiter as params)
 }
