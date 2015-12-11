@@ -1,13 +1,12 @@
 package org.mypathus.tsgforce.dao;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
 import org.junit.Test;
 import org.mypathus.tsgforce.model.HeaderFieldMapping;
-import org.mypathus.tsgforce.model.ReportIdentificationHelper;
-import org.mypathus.tsgforce.processing.ReportIdentifier;
 
 public class HeaderMappingDaoTest {
 	
@@ -16,12 +15,12 @@ public class HeaderMappingDaoTest {
 	String survey = "SAMPLE Post Surveys.xlsx";
 	
 	@Test
-	public void getTextReportLayoutTest() {
-		ReportIdentificationHelper helper = ReportIdentifier.getIdentificationHelper("text/plain", balances);
-		int actualId = helper.getId();
-		int expectedId = 1;
-		assertEquals(expectedId, actualId);
+	public void initFactoryTest(){
+		HeaderMappingDao dao = new HeaderMappingDao();
+		assertNotNull(dao.factory);
 	}
+	
+	
 	
 	@Test
 	public void getHeaderFieldMappingTest() {
