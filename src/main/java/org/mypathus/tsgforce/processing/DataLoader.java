@@ -26,7 +26,6 @@ public class DataLoader {
 		}
 		
 		md5List.add(md5);
-		int reportDBId = ReportIdentifier.identifyReportByHeader(fileType, fileName);
 		
 	}
 	
@@ -40,6 +39,18 @@ public class DataLoader {
 	
 	public String getFileDate(String fileName) {
 		return GenericFileHandler.getTimeStampInFile(fileName);
+	}
+	
+	public void loadFiles(String fileType, String fileName) {
+		ReportIdentificationHelper identificationHelper = ReportIdentifier.getIdentificationHelper(fileType, fileName);
+		int reportId = identificationHelper.getId();
+		int dataStartRow = identificationHelper.getHeaderRow() + 2;
+		
+		
+		if(fileType.equals("text/plain")) {
+			TextFile textFile = new TextFile();
+			textFile.processTextRecords(fileName, dataStartRow, reportId);
+		}
 	}
 	
 	

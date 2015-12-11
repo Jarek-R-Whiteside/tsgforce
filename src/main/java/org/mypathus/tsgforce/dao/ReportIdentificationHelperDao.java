@@ -26,9 +26,10 @@ public class ReportIdentificationHelperDao {
        }
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<ReportIdentificationHelper> getAllIdentificationHelpers(){
 		Session session = factory.openSession();
-		List identificationHelpersList = null;
+		List<ReportIdentificationHelper> identificationHelpersList = null;
 		Transaction transaction = null;
 		try{
 			transaction = session.beginTransaction();

@@ -20,7 +20,6 @@ public class HeaderMappingDaoTest {
 		ReportIdentificationHelper helper = ReportIdentifier.getIdentificationHelper("text/plain", balances);
 		int actualId = helper.getId();
 		int expectedId = 1;
-				
 		assertEquals(expectedId, actualId);
 	}
 	

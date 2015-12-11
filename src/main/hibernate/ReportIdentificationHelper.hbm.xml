@@ -14,6 +14,6 @@
       <property name="type" column="report_type" type="string"/>
       <property name="header" column="report_header" type="string"/>
       <property name="name" column="report_name" type="string"/>
-      <property name="row" column="report_header_row" type="integer"/>
+      <property name="headerRow" column="report_header_row" type="integer"/>
    </class>
 </hibernate-mapping>

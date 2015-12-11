@@ -42,7 +42,7 @@ public class HeaderMappingDao {
 		for (ReportIdentificationHelper helper : identificationHelpers) {
 			if(helper.getType().equals("text/plain")){
 				String dbHeaders = helper.getHeader();
-				int row = helper.getRow();
+				int row = helper.getHeaderRow();
 				String headers = textFile.getTextFileHeaders(fileName, row);
 				if (dbHeaders.equals(headers)) {
 					return helper;
@@ -59,7 +59,7 @@ public class HeaderMappingDao {
 			if(helper.getType().equals("application/vnd.ms-excel")) {
 				try {
 					String dbHeaders = helper.getHeader();
-					int row = helper.getRow();
+					int row = helper.getHeaderRow();
 					String headers = xls.getExcelHeaders2003(fileName, row);
 					if(dbHeaders.equals(headers)) {
 						return helper;
@@ -79,7 +79,7 @@ public class HeaderMappingDao {
 			if(helper.getType().equals("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet/vnd.ms-excel")) {
 				try {
 					String dbHeaders = helper.getHeader();
-					int row = helper.getRow();
+					int row = helper.getHeaderRow();
 					String headers = xls.getExcelHeaders2007(fileName, row);
 					if(dbHeaders.equals(headers)) {
 						return helper;

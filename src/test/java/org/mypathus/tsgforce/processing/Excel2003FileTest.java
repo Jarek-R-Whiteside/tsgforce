@@ -1,4 +1,4 @@
-package org.mypathus.tsgforce.model;
+package org.mypathus.tsgforce.processing;
 
 import static org.junit.Assert.*;
 
