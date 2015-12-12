@@ -2,6 +2,7 @@ package org.mypathus.tsgforce.processing;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -57,5 +58,42 @@ public class Excel2003File {
 		workbook.close();
 		inputStream.close();
 		return header.toString();
+	}
+	
+	//To implement
+	public void processXLSRecords(String fileName, Integer dataStartRow, Integer reportId) throws IOException {
+		Path path = Paths.get(fileDirectory + fileName);
+		FileInputStream inputStream = new FileInputStream(new File(path.toString()));
+
+		Workbook workbook = new HSSFWorkbook(inputStream);
+		Sheet firstSheet = workbook.getSheetAt(0);
+		Iterator<Row> iterator = firstSheet.iterator();
+		StringBuilder header = new StringBuilder();
+		Row nextRow = null;
+		
+		for(int i = 0; i<dataStartRow; i++) {
+			nextRow = iterator.next();
+		}
+		
+		Iterator<Cell> cellIterator = nextRow.cellIterator();
+
+		while (cellIterator.hasNext()) {
+			Cell cell = cellIterator.next();
+
+			switch (cell.getCellType()) {
+			case Cell.CELL_TYPE_STRING:
+				header.append(cell.getStringCellValue());
+				break;
+			case Cell.CELL_TYPE_BOOLEAN:
+				header.append(cell.getStringCellValue());
+				break;
+			case Cell.CELL_TYPE_NUMERIC:
+				header.append(cell.getStringCellValue());
+				break;
+			}
+		}
+
+		workbook.close();
+		inputStream.close();
 	}
 }

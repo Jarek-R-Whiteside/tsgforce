@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.mypathus.tsgforce.dao.HeaderMappingDao;
 import org.mypathus.tsgforce.model.HeaderFieldMapping;
+import org.mypathus.tsgforce.model.TemplateTextBalance;
 import org.mypathus.tsgforce.resources.FileContainer;
 
 public class TextFile {
@@ -48,7 +49,7 @@ public class TextFile {
 			}
 			
 			while((line = reader.readLine()) != null) {
-				insertTextRecord(line, fieldMappingList);
+				insertTextRecord();
 			}
 			reader.close();
 		} catch (IOException e) {
@@ -56,7 +57,29 @@ public class TextFile {
 		}
 	}
 	
-	public void insertTextRecord(String line, List<HeaderFieldMapping> fieldMappingList) {
+	public void parseTextRecord(String line, List<HeaderFieldMapping> fieldMappingList){
+				
+		//sort by startPos?
+		for(HeaderFieldMapping fieldMapping : fieldMappingList) {
+			int fieldId = fieldMapping.getId();
+			String fieldName = fieldMapping.getName();
+			int fieldStartPos = fieldMapping.getStartPos();
+			int fieldEndPos = fieldMapping.getEndPos();
+			String fieldDestination = fieldMapping.getDestination();
+			
+			if(fieldDestination.toLowerCase().contains("balance")) {
+				TemplateTextBalance balance = new TemplateTextBalance();
+				if(fieldName.equals("employer")) {
+					//get employer from line and set it to object
+					//balance.setEmployer();
+				}
+				
+			}
+			
+		}
+	}
+	
+	public void insertTextRecord() {
 		
 	}
 	
