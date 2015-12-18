@@ -7,6 +7,7 @@ public class ReportIdentificationHelper {
 	private String header;
 	private String name;
 	private int headerRow;
+	private int dataRow;
 		
 	public int getId() {
 		return id;
@@ -37,6 +38,12 @@ public class ReportIdentificationHelper {
 	}
 	public void setHeaderRow(int row) {
 		this.headerRow = row;
+	}
+	public int getDataRow() {
+		return dataRow;
+	}
+	public void setDataRow(int dataRow) {
+		this.dataRow = dataRow;
 	}
 	
 	

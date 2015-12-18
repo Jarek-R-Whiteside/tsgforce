@@ -57,8 +57,8 @@ public class TextFile {
 		}
 	}
 	
-	public void parseTextRecord(String line, List<HeaderFieldMapping> fieldMappingList){
-				
+	public String parseTextRecord(String line, List<HeaderFieldMapping> fieldMappingList){
+		String parsedString = "";		
 		//sort by startPos?
 		for(HeaderFieldMapping fieldMapping : fieldMappingList) {
 			int fieldId = fieldMapping.getId();
@@ -69,14 +69,14 @@ public class TextFile {
 			
 			if(fieldDestination.toLowerCase().contains("balance")) {
 				TemplateTextBalance balance = new TemplateTextBalance();
-				if(fieldName.equals("employer")) {
+				if(fieldName.equals("aText")) {
 					//get employer from line and set it to object
 					//balance.setEmployer();
 				}
 				
 			}
-			
 		}
+		return parsedString;
 	}
 	
 	public void insertTextRecord() {

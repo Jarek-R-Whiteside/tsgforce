@@ -4,14 +4,14 @@
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name="org.mypathus.tsgforce.model.HeaderFieldMapping" table="mapping">
+   <class name="org.mypathus.tsgforce.model.HeaderFieldMapping" table="field_mapping">
       <meta attribute="class-description">
          This class contains the Balance files detail. 
       </meta>
-      <id name="id" column="id" type="integer">
+      <id name="id" column="report_id" type="integer">
          <generator class="native"/>
       </id>
-      <property name="name" column="field_name" type="string"/>
+      <property name="name" column="field_id" type="string"/>
       <property name="startPos" column="start_pos" type="int"/>
       <property name="endPos" column="end_pos" type="int"/>
       <property name="destination" column="destination" type="string"/>

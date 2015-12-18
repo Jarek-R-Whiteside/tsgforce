@@ -1,7 +1,9 @@
 package org.mypathus.tsgforce.dao;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -27,9 +29,10 @@ public class ReportIdentificationHelperDaoTest {
 	@Test
 	public void getTextIdentificationHelperTest() {
 		ReportIdentificationHelper helper = ReportIdentificationHelperDao.getTextIdentificationHelper(balances);
-		assertEquals(1, helper.getId());
 		assertEquals("balances", helper.getName());
 		assertEquals("text/plain", helper.getType());
+		assertEquals(1, helper.getId());
+
 	}
 	
 	@Ignore
@@ -53,7 +56,11 @@ public class ReportIdentificationHelperDaoTest {
 	@Test
 	public void getAllIdentificationHelpersTest(){
 		ReportIdentificationHelperDao dao = new ReportIdentificationHelperDao();
-		assertNotNull(dao.getAllIdentificationHelpers());
+		List<ReportIdentificationHelper> helpersList = dao.getAllIdentificationHelpers();
+		List<Integer> idList = Arrays.asList(helpersList.get(0).getId(), helpersList.get(1).getId());
+		assertNotNull(helpersList);
+		assertNotNull(idList);
+		assertTrue(idList.contains(1) && idList.contains(2));
 	}
 
 }

@@ -24,9 +24,7 @@ public class DataLoader {
 			logger.error("File has already been loaded");
 			return;
 		}
-		
 		md5List.add(md5);
-		
 	}
 	
 	public String getFileType(String fileName) {
@@ -44,10 +42,9 @@ public class DataLoader {
 	public void loadFiles(String fileType, String fileName) {
 		ReportIdentificationHelper identificationHelper = ReportIdentifier.getIdentificationHelper(fileType, fileName);
 		int reportId = identificationHelper.getId();
-		int dataStartRow = identificationHelper.getHeaderRow() + 2;
-		
 		
 		if(fileType.equals("text/plain")) {
+			int dataStartRow = identificationHelper.getHeaderRow() + 2;
 			TextFile textFile = new TextFile();
 			textFile.processTextRecords(fileName, dataStartRow, reportId);
 		}

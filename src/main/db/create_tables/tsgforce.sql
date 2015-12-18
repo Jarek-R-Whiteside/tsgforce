@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `mapping` (
-  `report_id` varchar(3) NOT NULL,
-  `field_name` varchar(35) NOT NULL,
-  `start_pos` int(3) NOT NULL,
-  `end_pos` int(3) NOT NULL,
-  `destination` varchar(45) NOT NULL,
-  PRIMARY KEY (`report_id`,`field_name`)
+  `report_id` int(3) NOT NULL,
+  `field_id` varchar(35) NOT NULL,
+  `start_pos` int(4) NOT NULL,
+  `end_pos` int(4) NOT NULL,
+  `destination` varchar(255) NOT NULL,
+  PRIMARY KEY (`report_id`,`field_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -41,9 +41,10 @@ CREATE TABLE IF NOT EXISTS `mapping` (
 -- Table structure for table `report`
 --
 
-CREATE TABLE IF NOT EXISTS `report` (
-  `report_id` varchar(3) NOT NULL,
-  `file_type` varchar(4) NOT NULL,
+CREATE TABLE IF NOT EXISTS `report_identification` (
+  `report_id` int(3) NOT NULL,
+  `report_name` varchar(45),
+  `file_type` varchar(50) NOT NULL,
   `header` varchar(4000) NOT NULL,
   `header_row` int(6) NOT NULL,
   PRIMARY KEY (`report_id`)
@@ -57,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `report` (
 -- Constraints for table `mapping`
 --
 ALTER TABLE `mapping`
-  ADD CONSTRAINT `mapping_fk1` FOREIGN KEY (`report_id`) REFERENCES `report` (`report_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `mapping_fk1` FOREIGN KEY (`report_id`) REFERENCES `report_identification` (`report_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
